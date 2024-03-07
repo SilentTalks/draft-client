@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../mock/chat_list_dto.dart';
-import '../widget/user_dialog_list_view.dart';
+import '../widget/chat_list.dart';
 
 class ChatListScreen extends StatelessWidget {
   const ChatListScreen({super.key});

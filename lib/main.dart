@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:silent_talks/domain/main/widget/main.dart';
 
 import './domain/main/widget/main.dart';
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../main/enum/route_path_name.dart';
 import '../dto/chat_list.dart';
 
 class ChatListTileWidget extends StatelessWidget {
@@ -15,7 +16,7 @@ class ChatListTileWidget extends StatelessWidget {
       ),
       title: Text(chatListDTO.username),
       subtitle: Text(chatListDTO.lastMessage),
-      onTap: () => Navigator.of(context).pushNamed('/chat'),
+      onTap: () => Navigator.of(context).pushNamed(RoutePathNameEnum.chat.value),
     );
   }
 }
