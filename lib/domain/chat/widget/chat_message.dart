@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:silent_talks/domain/chat/dto/chat_message.dart';
+
+import '../dto/chat_message.dart';
+import 'chat_message_bubble.dart';
 
 class ChatMessageWidget extends StatelessWidget {
   final ChatMessageDTO chatMessageDTO;
@@ -8,6 +10,6 @@ class ChatMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(chatMessageDTO.text);
+    return ChatMessageBubble(chatMessageDTO: chatMessageDTO);
   }
 }

@@ -1,31 +1,23 @@
 class ChatMessageDTO {
-  final int id;
-  final String username;
-  final String avatar;
   final String text;
+  final bool isOwn;
 
   const ChatMessageDTO({
-    required this.id,
-    required this.username,
-    required this.avatar,
     required this.text,
+    required this.isOwn,
   });
 
   factory ChatMessageDTO.fromJson(Map<String, dynamic> data) {
     return ChatMessageDTO(
-      id: data['id'],
-      username: data['username'],
-      avatar: data['avatar'],
       text: data['text'],
+      isOwn: data['isOwn'],
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
-      'username': username,
-      'avatar': avatar,
       'text': text,
+      'isOwn': isOwn,
     };
   }
 }

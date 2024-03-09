@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widget/chat_message_list.dart';
-import '../mock/chat_message_dto.dart';
+import '../mock/chat_dto.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -10,9 +10,16 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Screen'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CircleAvatar(backgroundImage: NetworkImage(chatDTO.avatar)),
+            const SizedBox(width: 6),
+            Text(chatDTO.username),
+          ],
+        ),
       ),
-      body: ChatMessageListWidget(chatMessageDTOList: chatMessageDTOList),
+      body: ChatMessageListWidget(chatDTO: chatDTO),
     );
   }
 }
