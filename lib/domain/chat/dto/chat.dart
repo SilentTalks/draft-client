@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import './chat_message.dart';
 
 class ChatDTO {
